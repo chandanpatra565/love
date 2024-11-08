@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .love-me {
+            font-size: 4rem;
+        }
+        .center {
+            text-align: center;
+        }
+        .font-size {
+            font-size: 2rem;
+            color: white;
+        }
+        #Yes{
+            background-color: green;
+        }
+        #No{
+            background-color: Red;
+        }
+        #No:hover {
+            translate: 17rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="all_text">
+        <p class="love-me">Do You Love Me?</p>
+        <div class="center">
+            <input type="button" id="Yes" class="font-size" value="Yes">
+            <input type="button" id="No" class="font-size" value="No">
+        </div>
+    </div>
+
+    <script>
+        
+        const yesButton = document.getElementById('Yes');
+        const allText = document.getElementById('all_text');
+        yesButton.addEventListener('click', function() {
+            allText.innerHTML = '';
+            const congratsMessage = document.createElement('p');
+            congratsMessage.textContent = 'Congratulations!';
+            congratsMessage.style.fontSize = '3rem';
+            document.body.appendChild(congratsMessage);
+        });
+    </script>
+</body>
+</html>
